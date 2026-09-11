@@ -14,9 +14,6 @@ Portfólio pessoal de João Lescovar, desenvolvido com HTML, CSS e JavaScript e 
 - Animações suaves com suporte a redução de movimento
 - Imagens otimizadas em WebP
 
-## Executar localmente
-
-Sirva esta pasta com um servidor HTTP local e abra o endereço fornecido no navegador.
 
 ## Publicação
 
