@@ -38,9 +38,6 @@ const setContainerInteractive = (container, isInteractive) => {
       sideTitles: ["Início", "Sobre", "Habilidades", "Projetos", "Redes"],
       sideDetails: ["Apresentação", "Minha trajetória", "Tecnologias e ferramentas", "Trabalhos selecionados", "Onde me encontrar"],
       connect: "Conecte-se",
-      heroTitle: "Transformo ideias em <span>experiências digitais.</span>",
-      heroPrimary: "Explorar projetos <span aria-hidden=\"true\">↗</span>",
-      heroSecondary: "Conhecer meu trabalho",
       skillsKicker: "MINHA STACK",
       skillsTitle: "Tecnologias que uso para construir.",
       skillsDescription: "Ferramentas que fazem parte dos meus estudos, projetos e soluções.",
@@ -53,8 +50,13 @@ const setContainerInteractive = (container, isInteractive) => {
       resumeTitle: "Currículo",
       resumeDescription: "Uma versão completa estará disponível em breve.",
       soon: "Em breve",
-      projectsKicker: "PROJETOS SELECIONADOS",
-      projectsTitle: "Ideias que saíram do papel.",
+      realProjectsKicker: "PROJETOS REAIS",
+      realProjectsTitle: "Projetos que viraram solução.",
+      realProjectsDescription: "Trabalhos criados para clientes, venda ou aplicação no mercado.",
+      realProjectsNoteLabel: "CASES COMERCIAIS",
+      realProjectsNoteText: "Novos projetos serão apresentados aqui.",
+      projectsKicker: "CRIAÇÕES AUTORAIS",
+      projectsTitle: "Projetos Pessoais.",
       projectsDescription: "Clique nas imagens para navegar pelas telas de cada projeto.",
       swipe: "Deslize para explorar <span>→</span>",
       featured: "2026 — DESTAQUE",
@@ -89,9 +91,6 @@ const setContainerInteractive = (container, isInteractive) => {
       sideTitles: ["Home", "About", "Skills", "Projects", "Socials"],
       sideDetails: ["Introduction", "My journey", "Technologies and tools", "Selected work", "Where to find me"],
       connect: "Connect",
-      heroTitle: "I turn ideas into <span>digital experiences.</span>",
-      heroPrimary: "Explore projects <span aria-hidden=\"true\">↗</span>",
-      heroSecondary: "See my work",
       skillsKicker: "MY STACK",
       skillsTitle: "Technologies I use to build.",
       skillsDescription: "Tools that are part of my studies, projects and solutions.",
@@ -104,8 +103,13 @@ const setContainerInteractive = (container, isInteractive) => {
       resumeTitle: "Résumé",
       resumeDescription: "A complete version will be available soon.",
       soon: "Coming soon",
-      projectsKicker: "SELECTED PROJECTS",
-      projectsTitle: "Ideas brought to life.",
+      realProjectsKicker: "REAL-WORLD PROJECTS",
+      realProjectsTitle: "Projects turned into solutions.",
+      realProjectsDescription: "Work created for clients, sale or real market use.",
+      realProjectsNoteLabel: "COMMERCIAL CASES",
+      realProjectsNoteText: "New projects will be presented here.",
+      projectsKicker: "PERSONAL CREATIONS",
+      projectsTitle: "Personal Projects.",
       projectsDescription: "Click the images to browse each project's screens.",
       swipe: "Swipe to explore <span>→</span>",
       featured: "2026 — FEATURED",
@@ -140,9 +144,6 @@ const setContainerInteractive = (container, isInteractive) => {
       sideTitles: ["Inicio", "Sobre mí", "Habilidades", "Proyectos", "Redes"],
       sideDetails: ["Presentación", "Mi trayectoria", "Tecnologías y herramientas", "Trabajos seleccionados", "Dónde encontrarme"],
       connect: "Conéctate",
-      heroTitle: "Transformo ideas en <span>experiencias digitales.</span>",
-      heroPrimary: "Explorar proyectos <span aria-hidden=\"true\">↗</span>",
-      heroSecondary: "Conocer mi trabajo",
       skillsKicker: "MI STACK",
       skillsTitle: "Tecnologías que uso para construir.",
       skillsDescription: "Herramientas que forman parte de mis estudios, proyectos y soluciones.",
@@ -155,8 +156,13 @@ const setContainerInteractive = (container, isInteractive) => {
       resumeTitle: "Currículum",
       resumeDescription: "Una versión completa estará disponible próximamente.",
       soon: "Próximamente",
-      projectsKicker: "PROYECTOS SELECCIONADOS",
-      projectsTitle: "Ideas que salieron del papel.",
+      realProjectsKicker: "PROYECTOS REALES",
+      realProjectsTitle: "Proyectos que se convirtieron en soluciones.",
+      realProjectsDescription: "Trabajos creados para clientes, venta o aplicación en el mercado.",
+      realProjectsNoteLabel: "CASOS COMERCIALES",
+      realProjectsNoteText: "Aquí se presentarán nuevos proyectos.",
+      projectsKicker: "CREACIONES PERSONALES",
+      projectsTitle: "Proyectos Personales.",
       projectsDescription: "Haz clic en las imágenes para recorrer las pantallas de cada proyecto.",
       swipe: "Desliza para explorar <span>→</span>",
       featured: "2026 — DESTACADO",
@@ -217,9 +223,6 @@ const setContainerInteractive = (container, isInteractive) => {
     setList(".side-copy strong", text.sideTitles);
     setList(".side-copy small", text.sideDetails);
     setText(".sidebar-footer > span", text.connect);
-    setHTML("#heroTitle", text.heroTitle);
-    setHTML(".hero-actions .button-primary", text.heroPrimary);
-    setText(".hero-actions .button-secondary", text.heroSecondary);
     setText("#habilidades .section-kicker", text.skillsKicker);
     setText("#skillsTitle", text.skillsTitle);
     setText(".skills-heading > p", text.skillsDescription);
@@ -229,9 +232,14 @@ const setContainerInteractive = (container, isInteractive) => {
     setText(".resume-card > div > span", text.resumeTitle);
     setText(".resume-card strong", text.resumeDescription);
     setText(".resume-status", text.soon);
-    setText("#projetos .section-kicker", text.projectsKicker);
+    setText(".real-projects .section-kicker", text.realProjectsKicker);
+    setText(".real-projects-heading h2", text.realProjectsTitle);
+    setText(".real-projects-heading > p", text.realProjectsDescription);
+    setText(".real-projects-note span", text.realProjectsNoteLabel);
+    setText(".real-projects-note p", text.realProjectsNoteText);
+    setText(".personal-projects-heading .section-kicker", text.projectsKicker);
     setText("#projectsTitle", text.projectsTitle);
-    setText(".projects-heading > p", text.projectsDescription);
+    setText(".personal-projects-heading > p", text.projectsDescription);
     setHTML(".projects-swipe-hint", text.swipe);
     setText(".project-card-featured .project-number", text.featured);
     setList(".project-content > p", text.projectDescriptions);
@@ -620,7 +628,7 @@ const setContainerInteractive = (container, isInteractive) => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const elements = Array.from(
     document.querySelectorAll(
-      ".skills-card, .about-section .section-heading, .about-grid, .projects-heading, .projects-grid, .connect-section, .faith-mark",
+      ".skills-card, .about-section .section-heading, .about-grid, .real-projects, .projects-heading, .projects-grid, .connect-section, .faith-mark",
     ),
   );
 

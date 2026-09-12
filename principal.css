@@ -499,126 +499,23 @@ button:focus-visible {
   line-height: 1.75;
 }
 
-/* Hero */
+/* Apresentação */
 .hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(330px, 0.75fr);
+  display: flex;
   align-items: center;
-  gap: clamp(40px, 7vw, 86px);
-  min-height: 650px;
-  overflow: hidden;
-  padding: clamp(42px, 6vw, 78px);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: rgba(20, 17, 17, 0.88);
-  box-shadow: var(--shadow);
+  justify-content: center;
+  min-height: 600px;
+  padding: clamp(48px, 7vw, 82px) 24px;
 }
 
-.hero::before {
-  content: none;
-}
-
-.hero::after {
-  content: none;
-}
-
-.hero-glow {
-  display: none;
-}
-
-.hero-copy,
 .profile-card {
   position: relative;
   z-index: 1;
-}
-
-.hero-role {
-  margin-bottom: 16px;
-  color: var(--accent);
-  font-family: "Poppins", sans-serif;
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.hero-role::before {
-  display: inline-block;
-  width: 22px;
-  height: 1px;
-  margin-right: 10px;
-  background: currentColor;
-  content: "";
-  vertical-align: middle;
-}
-
-.hero h1 {
-  max-width: 740px;
-  font-size: clamp(43px, 6.1vw, 76px);
-  font-weight: 700;
-  letter-spacing: -0.06em;
-  line-height: 0.99;
-}
-
-.hero h1 > span {
-  display: block;
-  padding-bottom: 0.08em;
-  color: var(--accent);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 32px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 48px;
-  padding: 0 20px;
-  border: 1px solid transparent;
-  border-radius: 13px;
-  font-size: 12px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.button-primary {
-  background: linear-gradient(120deg, var(--accent), #e9254d);
-  color: #fff;
-  box-shadow: 0 14px 34px rgba(255, 54, 95, 0.2);
-}
-
-.button-primary:hover {
-  box-shadow: 0 18px 42px rgba(255, 54, 95, 0.32);
-}
-
-.button-secondary {
-  border-color: var(--line);
-  background: rgba(255, 255, 255, 0.035);
-  color: var(--muted-strong);
-}
-
-.button-secondary:hover {
-  border-color: var(--line-strong);
-  background: rgba(255, 255, 255, 0.07);
-  color: var(--text);
-}
-
-/* Card da foto */
-.profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: min(100%, 420px);
   padding: 16px 8px;
 }
 
@@ -630,8 +527,8 @@ button:focus-visible {
   position: relative;
   display: grid;
   place-items: center;
-  width: 240px;
-  height: 240px;
+  width: 320px;
+  height: 320px;
   max-width: 82%;
   aspect-ratio: 1 / 1;
   flex: none;
@@ -674,7 +571,7 @@ button:focus-visible {
 }
 
 .profile-card h2 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: -0.035em;
 }
@@ -682,7 +579,7 @@ button:focus-visible {
 .profile-card h2 + p {
   margin-top: 3px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .project-tags span {
@@ -885,8 +782,37 @@ button:focus-visible {
   padding-bottom: 120px;
 }
 
-.projects-heading {
+.projects-heading,
+.real-projects-heading {
   align-items: flex-end;
+}
+
+.real-projects {
+  padding-bottom: 110px;
+  margin-bottom: 110px;
+  border-bottom: 1px solid var(--line);
+}
+
+.real-projects-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.real-projects-note span {
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.real-projects-note p {
+  color: var(--muted-strong);
+  font-size: 13px;
 }
 
 .projects-grid {
@@ -1423,15 +1349,6 @@ button:focus-visible {
 }
 
 @media (max-width: 1080px) {
-  .hero {
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.65fr);
-    gap: 40px;
-    padding: 48px;
-  }
-
-  .hero h1 {
-    font-size: clamp(42px, 6.2vw, 64px);
-  }
 
   .project-card {
     grid-column: span 6;
@@ -1459,23 +1376,6 @@ button:focus-visible {
 
   .topbar-inner {
     flex-direction: row-reverse;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 50px;
-  }
-
-  .hero-copy {
-    text-align: center;
-  }
-
-  .hero-role {
-    display: none;
-  }
-
-  .hero-actions {
-    justify-content: center;
   }
 
   .profile-card {
@@ -1523,29 +1423,12 @@ button:focus-visible {
   }
 
   .hero {
-    min-height: auto;
-    gap: 18px;
-    padding: 36px 20px 22px;
-    border-radius: 24px;
-  }
-
-  .hero h1 {
-    font-size: clamp(38px, 12.2vw, 54px);
-    line-height: 1.02;
-  }
-
-  .hero-actions {
-    margin-top: 26px;
-  }
-
-  .button {
-    width: 100%;
+    min-height: calc(100svh - 92px);
+    padding: 36px 20px 30px;
   }
 
   .profile-card {
-    padding: 16px 16px 0;
-    border-radius: 22px;
-    order: -1;
+    padding: 0;
   }
 
   .portrait-ring {
@@ -1695,6 +1578,22 @@ button:focus-visible {
     padding-bottom: 82px;
   }
 
+  .real-projects {
+    padding-bottom: 72px;
+    margin-bottom: 72px;
+  }
+
+  .real-projects-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+  }
+
+  .real-projects-note p {
+    font-size: 12px;
+  }
+
   .project-card-featured .project-media,
   .project-media {
     height: 185px;
@@ -1799,10 +1698,6 @@ button:focus-visible {
   .hero {
     padding-right: 16px;
     padding-left: 16px;
-  }
-
-  .hero h1 {
-    font-size: 36px;
   }
 
   .lb-btn {
