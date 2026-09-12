@@ -35,6 +35,7 @@
 
 html {
   scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 
 body {
@@ -505,8 +506,8 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 600px;
-  padding: clamp(48px, 7vw, 82px) 24px;
+  min-height: auto;
+  padding: 28px 24px 48px;
 }
 
 .profile-card {
@@ -793,26 +794,32 @@ button:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
-.real-projects-note {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 20px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+.real-projects-grid {
+  margin-top: 0;
 }
 
-.real-projects-note span {
-  color: var(--accent);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+.real-project-card {
+  --project-accent: #c7b18b;
+  grid-column: span 12;
 }
 
-.real-projects-note p {
-  color: var(--muted-strong);
-  font-size: 13px;
+.project-cares .project-media,
+.project-card-featured.project-cares .project-media {
+  height: auto;
+  aspect-ratio: 1600 / 764;
+  background: #17150f;
+}
+
+.project-cares .project-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.real-project-link {
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
 }
 
 .projects-grid {
@@ -1253,8 +1260,8 @@ button:focus-visible {
 
 .lightbox-close {
   position: absolute;
-  top: -54px;
-  right: 0;
+  top: 18px;
+  right: 18px;
   z-index: 4;
   display: grid;
   place-items: center;
@@ -1423,8 +1430,8 @@ button:focus-visible {
   }
 
   .hero {
-    min-height: calc(100svh - 92px);
-    padding: 36px 20px 30px;
+    min-height: auto;
+    padding: 24px 20px 4px;
   }
 
   .profile-card {
@@ -1583,15 +1590,21 @@ button:focus-visible {
     margin-bottom: 72px;
   }
 
-  .real-projects-note {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
-    padding: 16px 0;
+  .real-projects-grid {
+    display: block;
+    width: 100%;
+    overflow: visible;
   }
 
-  .real-projects-note p {
-    font-size: 12px;
+  .real-projects-grid .real-project-card {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+
+  .real-projects-grid .project-card-featured.project-cares .project-media {
+    height: auto;
+    aspect-ratio: 1600 / 764;
   }
 
   .project-card-featured .project-media,
@@ -1679,7 +1692,8 @@ button:focus-visible {
   }
 
   .lightbox-close {
-    top: -48px;
+    top: 12px;
+    right: 12px;
   }
 
   .lightbox-nav {

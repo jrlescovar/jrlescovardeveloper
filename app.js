@@ -42,20 +42,23 @@ const setContainerInteractive = (container, isInteractive) => {
       skillsTitle: "Tecnologias que uso para construir.",
       skillsDescription: "Ferramentas que fazem parte dos meus estudos, projetos e soluções.",
       aboutKicker: "SOBRE MIM",
-      aboutTitle: "Curiosidade para aprender.<br>Disciplina para construir.",
+      aboutTitle: "Desenvolvo experiências digitais que unem<br>design, código e propósito.",
       aboutParagraphs: [
-        "Sou <strong>João Lescovar</strong>, estudante de Sistemas de Informação na FIPP/UNOESTE. Meu interesse por programação começou em 2020, depois de um curso de desenvolvimento de jogos.",
-        "Desde então, venho transformando ideias em projetos que unem lógica, organização e uma experiência visual bem pensada. Gosto de entender o problema por inteiro e construir soluções que façam sentido de verdade.",
+        "Sou <strong>João Lescovar</strong>, estudante de <strong>Sistemas de Informação na FIPP/UNOESTE</strong> e desenvolvedor web.",
+        "Transformo ideias em <strong>sites modernos, responsivos e bem estruturados</strong>, buscando equilibrar identidade visual, experiência do usuário e soluções que realmente façam sentido para cada projeto.",
+        "Minha trajetória com programação começou em 2020 e, desde então, venho evoluindo através de estudos, projetos próprios e experiências reais de desenvolvimento.",
       ],
       resumeTitle: "Currículo",
       resumeDescription: "Uma versão completa estará disponível em breve.",
       soon: "Em breve",
       realProjectsKicker: "PROJETOS REAIS",
-      realProjectsTitle: "Projetos que viraram solução.",
-      realProjectsDescription: "Trabalhos criados para clientes, venda ou aplicação no mercado.",
-      realProjectsNoteLabel: "CASES COMERCIAIS",
-      realProjectsNoteText: "Novos projetos serão apresentados aqui.",
-      projectsKicker: "CRIAÇÕES AUTORAIS",
+      realProjectsTitle: "Projetos Pelo Mundo",
+      realProjectsDescription: "Clique nas imagens para navegar pelas telas de cada projeto.",
+      realProjectDescription: "Tu momento de café en Madrid. Café de especialidad, brunch y un espacio tranquilo para disfrutar sin prisas en Hortaleza.",
+      realProjectType: "Desenvolvimento Web",
+      realProjectCountry: "Espanha",
+      realProjectLink: "Visitar",
+      projectsKicker: "CRIAÇÕES",
       projectsTitle: "Projetos Pessoais.",
       projectsDescription: "Clique nas imagens para navegar pelas telas de cada projeto.",
       swipe: "Deslize para explorar <span>→</span>",
@@ -95,20 +98,23 @@ const setContainerInteractive = (container, isInteractive) => {
       skillsTitle: "Technologies I use to build.",
       skillsDescription: "Tools that are part of my studies, projects and solutions.",
       aboutKicker: "ABOUT ME",
-      aboutTitle: "Curiosity to learn.<br>Discipline to build.",
+      aboutTitle: "I develop digital experiences that unite<br>design, code and purpose.",
       aboutParagraphs: [
-        "I am <strong>João Lescovar</strong>, an Information Systems student at FIPP/UNOESTE. My interest in programming began in 2020, after a game development course.",
-        "Since then, I have been turning ideas into projects that combine logic, organization and thoughtful visual experiences. I like to understand the whole problem and build solutions that truly make sense.",
+        "I am <strong>João Lescovar</strong>, an <strong>Information Systems student at FIPP/UNOESTE</strong> and a web developer.",
+        "I turn ideas into <strong>modern, responsive and well-structured websites</strong>, seeking to balance visual identity, user experience and solutions that truly make sense for each project.",
+        "My programming journey began in 2020 and, since then, I have continued to grow through studies, personal projects and real-world development experience.",
       ],
       resumeTitle: "Résumé",
       resumeDescription: "A complete version will be available soon.",
       soon: "Coming soon",
       realProjectsKicker: "REAL-WORLD PROJECTS",
-      realProjectsTitle: "Projects turned into solutions.",
-      realProjectsDescription: "Work created for clients, sale or real market use.",
-      realProjectsNoteLabel: "COMMERCIAL CASES",
-      realProjectsNoteText: "New projects will be presented here.",
-      projectsKicker: "PERSONAL CREATIONS",
+      realProjectsTitle: "Projects Around the World",
+      realProjectsDescription: "Click the images to browse each project's screens.",
+      realProjectDescription: "Your coffee moment in Madrid. Specialty coffee, brunch and a peaceful space to enjoy without rushing in Hortaleza.",
+      realProjectType: "Web Development",
+      realProjectCountry: "Spain",
+      realProjectLink: "Visit",
+      projectsKicker: "CREATIONS",
       projectsTitle: "Personal Projects.",
       projectsDescription: "Click the images to browse each project's screens.",
       swipe: "Swipe to explore <span>→</span>",
@@ -148,20 +154,23 @@ const setContainerInteractive = (container, isInteractive) => {
       skillsTitle: "Tecnologías que uso para construir.",
       skillsDescription: "Herramientas que forman parte de mis estudios, proyectos y soluciones.",
       aboutKicker: "SOBRE MÍ",
-      aboutTitle: "Curiosidad para aprender.<br>Disciplina para construir.",
+      aboutTitle: "Desarrollo experiencias digitales que unen<br>diseño, código y propósito.",
       aboutParagraphs: [
-        "Soy <strong>João Lescovar</strong>, estudiante de Sistemas de Información en FIPP/UNOESTE. Mi interés por la programación comenzó en 2020, después de un curso de desarrollo de videojuegos.",
-        "Desde entonces, transformo ideas en proyectos que combinan lógica, organización y una experiencia visual bien pensada. Me gusta entender el problema por completo y construir soluciones que realmente tengan sentido.",
+        "Soy <strong>João Lescovar</strong>, estudiante de <strong>Sistemas de Información en FIPP/UNOESTE</strong> y desarrollador web.",
+        "Transformo ideas en <strong>sitios modernos, responsivos y bien estructurados</strong>, buscando equilibrar identidad visual, experiencia de usuario y soluciones que realmente tengan sentido para cada proyecto.",
+        "Mi trayectoria en programación comenzó en 2020 y, desde entonces, sigo evolucionando mediante estudios, proyectos propios y experiencias reales de desarrollo.",
       ],
       resumeTitle: "Currículum",
       resumeDescription: "Una versión completa estará disponible próximamente.",
       soon: "Próximamente",
       realProjectsKicker: "PROYECTOS REALES",
-      realProjectsTitle: "Proyectos que se convirtieron en soluciones.",
-      realProjectsDescription: "Trabajos creados para clientes, venta o aplicación en el mercado.",
-      realProjectsNoteLabel: "CASOS COMERCIALES",
-      realProjectsNoteText: "Aquí se presentarán nuevos proyectos.",
-      projectsKicker: "CREACIONES PERSONALES",
+      realProjectsTitle: "Proyectos por el Mundo",
+      realProjectsDescription: "Haz clic en las imágenes para recorrer las pantallas de cada proyecto.",
+      realProjectDescription: "Tu momento de café en Madrid. Café de especialidad, brunch y un espacio tranquilo para disfrutar sin prisas en Hortaleza.",
+      realProjectType: "Desarrollo Web",
+      realProjectCountry: "España",
+      realProjectLink: "Visitar",
+      projectsKicker: "CREACIONES",
       projectsTitle: "Proyectos Personales.",
       projectsDescription: "Haz clic en las imágenes para recorrer las pantallas de cada proyecto.",
       swipe: "Desliza para explorar <span>→</span>",
@@ -235,14 +244,16 @@ const setContainerInteractive = (container, isInteractive) => {
     setText(".real-projects .section-kicker", text.realProjectsKicker);
     setText(".real-projects-heading h2", text.realProjectsTitle);
     setText(".real-projects-heading > p", text.realProjectsDescription);
-    setText(".real-projects-note span", text.realProjectsNoteLabel);
-    setText(".real-projects-note p", text.realProjectsNoteText);
+    setText(".real-project-card .project-content > p", text.realProjectDescription);
+    setText(".real-project-type", text.realProjectType);
+    setText(".real-project-country", text.realProjectCountry);
+    setText(".real-project-link", text.realProjectLink);
     setText(".personal-projects-heading .section-kicker", text.projectsKicker);
     setText("#projectsTitle", text.projectsTitle);
     setText(".personal-projects-heading > p", text.projectsDescription);
     setHTML(".projects-swipe-hint", text.swipe);
-    setText(".project-card-featured .project-number", text.featured);
-    setList(".project-content > p", text.projectDescriptions);
+    setText(".project-manager .project-number", text.featured);
+    setList("#projectsGrid .project-content > p", text.projectDescriptions);
     document.querySelectorAll(".media-open").forEach((element) => { element.innerHTML = text.gallery; });
     document.querySelectorAll(".project-status-development").forEach((element) => {
       element.textContent = text.development;
@@ -250,7 +261,7 @@ const setContainerInteractive = (container, isInteractive) => {
     document.querySelectorAll(".project-status-updating").forEach((element) => {
       element.textContent = text.updating;
     });
-    setList(".project-link", text.projectLinks);
+    setList("#projectsGrid .project-link", text.projectLinks);
     setText("#contato .section-kicker", text.contactKicker);
     setText("#contactTitle", text.contactTitle);
     setText(".connect-copy > p:last-child", text.contactDescription);
@@ -483,7 +494,7 @@ const setContainerInteractive = (container, isInteractive) => {
   const nextButton = document.getElementById("lbNext");
   const counter = document.getElementById("lbCounter");
   const progress = document.getElementById("lbLine");
-  const projectsGrid = document.getElementById("projectsGrid");
+  const projectCollections = document.querySelectorAll(".projects-grid");
 
   if (
     !lightbox ||
@@ -494,7 +505,7 @@ const setContainerInteractive = (container, isInteractive) => {
     !nextButton ||
     !counter ||
     !progress ||
-    !projectsGrid
+    !projectCollections.length
   ) {
     return;
   }
@@ -605,22 +616,24 @@ const setContainerInteractive = (container, isInteractive) => {
     if (event.key === "ArrowLeft") showPreviousImage();
   });
 
-  projectsGrid.addEventListener("click", (event) => {
-    const mediaButton = event.target.closest(".project-media");
-    if (!mediaButton) return;
+  projectCollections.forEach((collection) => {
+    collection.addEventListener("click", (event) => {
+      const mediaButton = event.target.closest(".project-media");
+      if (!mediaButton) return;
 
-    const card = mediaButton.closest(".project-card");
-    if (!card) return;
+      const card = mediaButton.closest(".project-card");
+      if (!card) return;
 
-    const sources = (card.dataset.images || "")
-      .split(",")
-      .map((source) => source.trim())
-      .filter(Boolean);
+      const sources = (card.dataset.images || "")
+        .split(",")
+        .map((source) => source.trim())
+        .filter(Boolean);
 
-    if (!sources.length) return;
+      if (!sources.length) return;
 
-    const title = card.querySelector("h3")?.textContent?.trim() || "Projeto";
-    openLightbox(sources, title);
+      const title = card.querySelector("h3")?.textContent?.trim() || "Projeto";
+      openLightbox(sources, title);
+    });
   });
 })();
 
