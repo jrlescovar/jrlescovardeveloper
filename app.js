@@ -31,9 +31,8 @@ const setContainerInteractive = (container, isInteractive) => {
 
   const copy = {
     pt: {
-      description: "Portfólio de João Lescovar, desenvolvedor full stack e estudante de Sistemas de Informação.",
-      topLinks: ["Sobre", "Habilidades", "Projetos"],
-      headerContact: "Minhas redes",
+      description: "Portfólio de João Lescovar, desenvolvedor web e estudante de Sistemas de Informação.",
+      topLinks: ["Sobre", "Habilidades", "Projetos", "Redes"],
       sidebarLabel: "Navegação",
       sideTitles: ["Início", "Sobre", "Habilidades", "Projetos", "Redes"],
       sideDetails: ["Apresentação", "Minha trajetória", "Tecnologias e ferramentas", "Trabalhos selecionados", "Onde me encontrar"],
@@ -57,7 +56,7 @@ const setContainerInteractive = (container, isInteractive) => {
       realProjectDescription: "Tu momento de café en Madrid. Café de especialidad, brunch y un espacio tranquilo para disfrutar sin prisas en Hortaleza.",
       realProjectType: "Desenvolvimento Web",
       realProjectCountry: "Espanha",
-      realProjectLink: "Visitar",
+      realProjectLink: "Visitar ↗",
       projectsKicker: "CRIAÇÕES",
       projectsTitle: "Projetos Pessoais.",
       projectsDescription: "Clique nas imagens para navegar pelas telas de cada projeto.",
@@ -87,9 +86,8 @@ const setContainerInteractive = (container, isInteractive) => {
       toggleLabel: "Mudar idioma para inglês",
     },
     en: {
-      description: "Portfolio of João Lescovar, Full Stack Developer and Information Systems student.",
-      topLinks: ["About", "Skills", "Projects"],
-      headerContact: "My links",
+      description: "Portfolio of João Lescovar, Web Developer and Information Systems student.",
+      topLinks: ["About", "Skills", "Projects", "Socials"],
       sidebarLabel: "Navigation",
       sideTitles: ["Home", "About", "Skills", "Projects", "Socials"],
       sideDetails: ["Introduction", "My journey", "Technologies and tools", "Selected work", "Where to find me"],
@@ -113,7 +111,7 @@ const setContainerInteractive = (container, isInteractive) => {
       realProjectDescription: "Your coffee moment in Madrid. Specialty coffee, brunch and a peaceful space to enjoy without rushing in Hortaleza.",
       realProjectType: "Web Development",
       realProjectCountry: "Spain",
-      realProjectLink: "Visit",
+      realProjectLink: "Visit ↗",
       projectsKicker: "CREATIONS",
       projectsTitle: "Personal Projects.",
       projectsDescription: "Click the images to browse each project's screens.",
@@ -143,9 +141,8 @@ const setContainerInteractive = (container, isInteractive) => {
       toggleLabel: "Mudar idioma para português",
     },
     es: {
-      description: "Portafolio de João Lescovar, desarrollador full stack y estudiante de Sistemas de Información.",
-      topLinks: ["Sobre mí", "Habilidades", "Proyectos"],
-      headerContact: "Mis redes",
+      description: "Portafolio de João Lescovar, desarrollador web y estudiante de Sistemas de Información.",
+      topLinks: ["Sobre mí", "Habilidades", "Proyectos", "Redes"],
       sidebarLabel: "Navegación",
       sideTitles: ["Inicio", "Sobre mí", "Habilidades", "Proyectos", "Redes"],
       sideDetails: ["Presentación", "Mi trayectoria", "Tecnologías y herramientas", "Trabajos seleccionados", "Dónde encontrarme"],
@@ -169,7 +166,7 @@ const setContainerInteractive = (container, isInteractive) => {
       realProjectDescription: "Tu momento de café en Madrid. Café de especialidad, brunch y un espacio tranquilo para disfrutar sin prisas en Hortaleza.",
       realProjectType: "Desarrollo Web",
       realProjectCountry: "España",
-      realProjectLink: "Visitar",
+      realProjectLink: "Visitar ↗",
       projectsKicker: "CREACIONES",
       projectsTitle: "Proyectos Personales.",
       projectsDescription: "Haz clic en las imágenes para recorrer las pantallas de cada proyecto.",
@@ -223,11 +220,10 @@ const setContainerInteractive = (container, isInteractive) => {
     const text = copy[selected];
 
     document.documentElement.lang = selected === "pt" ? "pt-BR" : selected;
-    document.title = "João Lescovar — Full Stack Developer";
+    document.title = "João Lescovar — Web Developer";
     if (description) description.content = text.description;
 
     setList(".topbar-nav .top-link", text.topLinks);
-    setText(".header-contact", text.headerContact);
     setText(".sidebar-nav-label", text.sidebarLabel);
     setList(".side-copy strong", text.sideTitles);
     setList(".side-copy small", text.sideDetails);
