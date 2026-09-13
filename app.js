@@ -50,13 +50,21 @@ const setContainerInteractive = (container, isInteractive) => {
       resumeTitle: "Currículo",
       resumeDescription: "Uma versão completa estará disponível em breve.",
       soon: "Em breve",
-      realProjectsKicker: "PROJETOS REAIS",
+      realProjectsKicker: "PROJETOS",
       realProjectsTitle: "Projetos Pelo Mundo",
       realProjectsDescription: "Clique nas imagens para navegar pelas telas de cada projeto.",
       realProjectDescription: "Tu momento de café en Madrid. Café de especialidad, brunch y un espacio tranquilo para disfrutar sin prisas en Hortaleza.",
       realProjectType: "Desenvolvimento Web",
       realProjectCountry: "Espanha",
       realProjectLink: "Visitar ↗",
+      mollyProjectDescription: "Café de origen, matcha y tostadas de masa madre. Un pequeño rincón en Getafe para disfrutar sin prisas.",
+      mollyProjectType: "Desenvolvimento Web",
+      mollyProjectCountry: "Espanha",
+      mollyProjectLink: "Visitar ↗",
+      terrioProjectDescription: "Café especial, comida boa e um espaço feito para aproveitar o momento em Londrina.",
+      terrioProjectType: "Desenvolvimento Web",
+      terrioProjectCountry: "Brasil",
+      terrioProjectLink: "Visitar ↗",
       projectsKicker: "CRIAÇÕES",
       projectsTitle: "Projetos Pessoais.",
       projectsDescription: "Clique nas imagens para navegar pelas telas de cada projeto.",
@@ -67,16 +75,15 @@ const setContainerInteractive = (container, isInteractive) => {
         "Estatísticas, campeonatos, perfis e personalização para uma comunidade de jogadores de EA27, remodelado e otimizado em uma nova versão do antigo EA26 Club APP.",
         "Disputa de pênaltis com cartas, estatísticas e mecânicas estratégicas, construída inteiramente em C.",
         "Recriação acadêmica do clássico dBase, com banco de dados dinâmico e estruturas encadeadas.",
-        "Catálogo responsivo com autenticação, carrinho por usuário e painel administrativo no Firebase.",
       ],
       gallery: "Ver galeria <b>↗</b>",
       development: "Em desenvolvimento",
       updating: "Em atualização",
-      projectLinks: ["Em breve", "Visitar ↗", "GitHub ↗", "GitHub ↗", "GitHub ↗"],
+      projectLinks: ["Em breve", "Visitar ↗", "GitHub ↗", "GitHub ↗"],
       contactKicker: "ALÉM DESTE PORTFÓLIO",
       contactTitle: "Me encontre por aí.",
       contactDescription: "Código, projetos e um pouco dos bastidores do que estou construindo.",
-      socialDetails: ["jrlescovar@gmail.com", "Código e projetos", "Perfil profissional", "Perfil pessoal", "Perfil em breve"],
+      socialDetails: ["jrlescovar@gmail.com", "Código e projetos", "Perfil profissional", "Perfil pessoal"],
       footerCredit: "Projetado e desenvolvido por João Lescovar.",
       rights: "Todos os direitos reservados.",
       previous: "← ANTERIOR",
@@ -105,13 +112,21 @@ const setContainerInteractive = (container, isInteractive) => {
       resumeTitle: "Résumé",
       resumeDescription: "A complete version will be available soon.",
       soon: "Coming soon",
-      realProjectsKicker: "REAL-WORLD PROJECTS",
+      realProjectsKicker: "PROJECTS",
       realProjectsTitle: "Projects Around the World",
       realProjectsDescription: "Click the images to browse each project's screens.",
       realProjectDescription: "Your coffee moment in Madrid. Specialty coffee, brunch and a peaceful space to enjoy without rushing in Hortaleza.",
       realProjectType: "Web Development",
       realProjectCountry: "Spain",
       realProjectLink: "Visit ↗",
+      mollyProjectDescription: "Single-origin coffee, matcha and sourdough toast. A small corner in Getafe to enjoy without rushing.",
+      mollyProjectType: "Web Development",
+      mollyProjectCountry: "Spain",
+      mollyProjectLink: "Visit ↗",
+      terrioProjectDescription: "Specialty coffee, good food and a space made to enjoy the moment in Londrina.",
+      terrioProjectType: "Web Development",
+      terrioProjectCountry: "Brazil",
+      terrioProjectLink: "Visit ↗",
       projectsKicker: "CREATIONS",
       projectsTitle: "Personal Projects.",
       projectsDescription: "Click the images to browse each project's screens.",
@@ -122,16 +137,15 @@ const setContainerInteractive = (container, isInteractive) => {
         "Statistics, tournaments, profiles and customization for an EA27 player community, redesigned and optimized as a new version of the former EA26 Club APP.",
         "A penalty shootout game with cards, statistics and strategic mechanics, built entirely in C.",
         "An academic recreation of the classic dBase, featuring a dynamic database and linked structures.",
-        "A responsive catalog with authentication, per-user carts and a Firebase admin panel.",
       ],
       gallery: "Open gallery <b>↗</b>",
       development: "In development",
       updating: "Being updated",
-      projectLinks: ["Coming soon", "Visit ↗", "GitHub ↗", "GitHub ↗", "GitHub ↗"],
+      projectLinks: ["Coming soon", "Visit ↗", "GitHub ↗", "GitHub ↗"],
       contactKicker: "BEYOND THIS PORTFOLIO",
       contactTitle: "Find me online.",
       contactDescription: "Code, projects and a glimpse behind the scenes of what I am building.",
-      socialDetails: ["jrlescovar@gmail.com", "Code and projects", "Professional profile", "Personal profile", "Profile coming soon"],
+      socialDetails: ["jrlescovar@gmail.com", "Code and projects", "Professional profile", "Personal profile"],
       footerCredit: "Designed and developed by João Lescovar.",
       rights: "All rights reserved.",
       previous: "← PREVIOUS",
@@ -160,13 +174,21 @@ const setContainerInteractive = (container, isInteractive) => {
       resumeTitle: "Currículum",
       resumeDescription: "Una versión completa estará disponible próximamente.",
       soon: "Próximamente",
-      realProjectsKicker: "PROYECTOS REALES",
+      realProjectsKicker: "PROYECTOS",
       realProjectsTitle: "Proyectos por el Mundo",
       realProjectsDescription: "Haz clic en las imágenes para recorrer las pantallas de cada proyecto.",
       realProjectDescription: "Tu momento de café en Madrid. Café de especialidad, brunch y un espacio tranquilo para disfrutar sin prisas en Hortaleza.",
       realProjectType: "Desarrollo Web",
       realProjectCountry: "España",
       realProjectLink: "Visitar ↗",
+      mollyProjectDescription: "Café de origen, matcha y tostadas de masa madre. Un pequeño rincón en Getafe para disfrutar sin prisas.",
+      mollyProjectType: "Desarrollo Web",
+      mollyProjectCountry: "España",
+      mollyProjectLink: "Visitar ↗",
+      terrioProjectDescription: "Café de especialidad, buena comida y un espacio creado para disfrutar el momento en Londrina.",
+      terrioProjectType: "Desarrollo Web",
+      terrioProjectCountry: "Brasil",
+      terrioProjectLink: "Visitar ↗",
       projectsKicker: "CREACIONES",
       projectsTitle: "Proyectos Personales.",
       projectsDescription: "Haz clic en las imágenes para recorrer las pantallas de cada proyecto.",
@@ -177,16 +199,15 @@ const setContainerInteractive = (container, isInteractive) => {
         "Estadísticas, campeonatos, perfiles y personalización para una comunidad de jugadores de EA27, rediseñado y optimizado como una nueva versión del antiguo EA26 Club APP.",
         "Una tanda de penaltis con cartas, estadísticas y mecánicas estratégicas, desarrollada completamente en C.",
         "Una recreación académica del clásico dBase, con una base de datos dinámica y estructuras enlazadas.",
-        "Un catálogo adaptable con autenticación, carritos por usuario y un panel administrativo en Firebase.",
       ],
       gallery: "Ver galería <b>↗</b>",
       development: "En desarrollo",
       updating: "En actualización",
-      projectLinks: ["Próximamente", "Visitar ↗", "GitHub ↗", "GitHub ↗", "GitHub ↗"],
+      projectLinks: ["Próximamente", "Visitar ↗", "GitHub ↗", "GitHub ↗"],
       contactKicker: "MÁS ALLÁ DE ESTE PORTAFOLIO",
       contactTitle: "Encuéntrame por aquí.",
       contactDescription: "Código, proyectos y un poco del proceso detrás de lo que estoy construyendo.",
-      socialDetails: ["jrlescovar@gmail.com", "Código y proyectos", "Perfil profesional", "Perfil personal", "Perfil próximamente"],
+      socialDetails: ["jrlescovar@gmail.com", "Código y proyectos", "Perfil profesional", "Perfil personal"],
       footerCredit: "Diseñado y desarrollado por João Lescovar.",
       rights: "Todos los derechos reservados.",
       previous: "← ANTERIOR",
@@ -240,14 +261,22 @@ const setContainerInteractive = (container, isInteractive) => {
     setText(".real-projects .section-kicker", text.realProjectsKicker);
     setText(".real-projects-heading h2", text.realProjectsTitle);
     setText(".real-projects-heading > p", text.realProjectsDescription);
-    setText(".real-project-card .project-content > p", text.realProjectDescription);
+    setText(".project-cares .project-content > p", text.realProjectDescription);
     setText(".real-project-type", text.realProjectType);
     setText(".real-project-country", text.realProjectCountry);
     setText(".real-project-link", text.realProjectLink);
+    setText(".project-molly .project-content > p", text.mollyProjectDescription);
+    setText(".molly-project-type", text.mollyProjectType);
+    setText(".molly-project-country", text.mollyProjectCountry);
+    setText(".molly-project-link", text.mollyProjectLink);
+    setText(".project-terrio .project-content > p", text.terrioProjectDescription);
+    setText(".terrio-project-type", text.terrioProjectType);
+    setText(".terrio-project-country", text.terrioProjectCountry);
+    setText(".terrio-project-link", text.terrioProjectLink);
     setText(".personal-projects-heading .section-kicker", text.projectsKicker);
     setText("#projectsTitle", text.projectsTitle);
     setText(".personal-projects-heading > p", text.projectsDescription);
-    setHTML(".projects-swipe-hint", text.swipe);
+    document.querySelectorAll(".projects-swipe-hint").forEach((element) => { element.innerHTML = text.swipe; });
     setText(".project-manager .project-number", text.featured);
     setList("#projectsGrid .project-content > p", text.projectDescriptions);
     document.querySelectorAll(".media-open").forEach((element) => { element.innerHTML = text.gallery; });
