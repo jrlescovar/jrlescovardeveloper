@@ -65,6 +65,14 @@ const setContainerInteractive = (container, isInteractive) => {
       terrioProjectType: "Desenvolvimento Web",
       terrioProjectCountry: "Brasil",
       terrioProjectLink: "Visitar ↗",
+      bananaProjectDescription: "Buen café. Buen brunch. Buen momento. Café de especialidad, tostadas, pancakes, matcha, smoothies y mucho más, preparados para disfrutarlos sin prisa.",
+      bananaProjectStatus: "Em desenvolvimento",
+      bananaProjectCountry: "Espanha",
+      bananaProjectLink: "Visitar ↗",
+      provenceProjectDescription: "Uma pausa que se transforma em experiência. Cafés especiais, cozinha autoral e um ambiente pensado para aproveitar cada detalhe.",
+      provenceProjectType: "Desenvolvimento Web",
+      provenceProjectCountry: "Brasil",
+      provenceProjectLink: "Visitar ↗",
       projectsKicker: "CRIAÇÕES",
       projectsTitle: "Projetos Pessoais.",
       projectsDescription: "Clique nas imagens para navegar pelas telas de cada projeto.",
@@ -127,6 +135,14 @@ const setContainerInteractive = (container, isInteractive) => {
       terrioProjectType: "Web Development",
       terrioProjectCountry: "Brazil",
       terrioProjectLink: "Visit ↗",
+      bananaProjectDescription: "Good coffee. Good brunch. Good moments. Specialty coffee, toast, pancakes, matcha, smoothies and much more, prepared to be enjoyed without rushing.",
+      bananaProjectStatus: "In development",
+      bananaProjectCountry: "Spain",
+      bananaProjectLink: "Visit ↗",
+      provenceProjectDescription: "A pause that becomes an experience. Specialty coffees, signature cuisine and a space designed to enjoy every detail.",
+      provenceProjectType: "Web Development",
+      provenceProjectCountry: "Brazil",
+      provenceProjectLink: "Visit ↗",
       projectsKicker: "CREATIONS",
       projectsTitle: "Personal Projects.",
       projectsDescription: "Click the images to browse each project's screens.",
@@ -189,6 +205,14 @@ const setContainerInteractive = (container, isInteractive) => {
       terrioProjectType: "Desarrollo Web",
       terrioProjectCountry: "Brasil",
       terrioProjectLink: "Visitar ↗",
+      bananaProjectDescription: "Buen café. Buen brunch. Buen momento. Café de especialidad, tostadas, pancakes, matcha, smoothies y mucho más, preparados para disfrutarlos sin prisa.",
+      bananaProjectStatus: "En desarrollo",
+      bananaProjectCountry: "España",
+      bananaProjectLink: "Visitar ↗",
+      provenceProjectDescription: "Una pausa que se transforma en experiencia. Cafés de especialidad, cocina de autor y un ambiente pensado para disfrutar cada detalle.",
+      provenceProjectType: "Desarrollo Web",
+      provenceProjectCountry: "Brasil",
+      provenceProjectLink: "Visitar ↗",
       projectsKicker: "CREACIONES",
       projectsTitle: "Proyectos Personales.",
       projectsDescription: "Haz clic en las imágenes para recorrer las pantallas de cada proyecto.",
@@ -273,6 +297,14 @@ const setContainerInteractive = (container, isInteractive) => {
     setText(".terrio-project-type", text.terrioProjectType);
     setText(".terrio-project-country", text.terrioProjectCountry);
     setText(".terrio-project-link", text.terrioProjectLink);
+    setText(".project-banana .project-content > p", text.bananaProjectDescription);
+    setText(".banana-project-status", text.bananaProjectStatus);
+    setText(".banana-project-country", text.bananaProjectCountry);
+    setText(".banana-project-link", text.bananaProjectLink);
+    setText(".project-provence .project-content > p", text.provenceProjectDescription);
+    setText(".provence-project-type", text.provenceProjectType);
+    setText(".provence-project-country", text.provenceProjectCountry);
+    setText(".provence-project-link", text.provenceProjectLink);
     setText(".personal-projects-heading .section-kicker", text.projectsKicker);
     setText("#projectsTitle", text.projectsTitle);
     setText(".personal-projects-heading > p", text.projectsDescription);

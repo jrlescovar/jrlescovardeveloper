@@ -818,6 +818,38 @@ button:focus-visible {
   object-position: center;
 }
 
+.project-banana {
+  --project-accent: #ffd100;
+}
+
+.project-banana .project-media {
+  height: auto;
+  aspect-ratio: 1600 / 766;
+  background: #111;
+}
+
+.project-banana .project-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-provence {
+  --project-accent: #29acd1;
+}
+
+.project-provence .project-media {
+  height: auto;
+  aspect-ratio: 1600 / 771;
+  background: #0d2d38;
+}
+
+.project-provence .project-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
 .real-project-link,
 .molly-project-link,
 .terrio-project-link {
@@ -1590,6 +1622,16 @@ button:focus-visible {
   .real-projects-grid .project-terrio .project-media {
     height: auto;
     aspect-ratio: 1600 / 764;
+  }
+
+  .real-projects-grid .project-banana .project-media {
+    height: auto;
+    aspect-ratio: 1600 / 766;
+  }
+
+  .real-projects-grid .project-provence .project-media {
+    height: auto;
+    aspect-ratio: 1600 / 771;
   }
 
   .project-card-featured .project-media,
