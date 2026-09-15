@@ -34,18 +34,29 @@
 }
 
 html {
+  min-height: 100%;
+  background-color: var(--bg);
   scroll-behavior: smooth;
   touch-action: manipulation;
+  overscroll-behavior-y: none;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
+  background-color: var(--bg);
   background: linear-gradient(145deg, #100e0e 0%, var(--bg) 45%, #11100f 100%);
   color: var(--text);
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
   text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--bg);
 }
 
 body::before {
@@ -769,6 +780,39 @@ button:focus-visible {
   margin-top: 0;
 }
 
+.project-azukeria {
+  --project-accent: #8b0b20;
+}
+
+.project-azukeria .project-media,
+.project-card-featured.project-azukeria .project-media {
+  height: auto;
+  aspect-ratio: 1880 / 888;
+  background: #21070b;
+}
+
+.project-azukeria .project-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-parka {
+  --project-accent: #a63d27;
+}
+
+.project-parka .project-media {
+  height: auto;
+  aspect-ratio: 1873 / 863;
+  background: #3c2119;
+}
+
+.project-parka .project-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
 .project-cares {
   --project-accent: #c7b18b;
 }
@@ -776,7 +820,7 @@ button:focus-visible {
 .project-cares .project-media,
 .project-card-featured.project-cares .project-media {
   height: auto;
-  aspect-ratio: 1600 / 764;
+  aspect-ratio: 1600 / 758;
   background: #17150f;
 }
 
@@ -824,7 +868,7 @@ button:focus-visible {
 
 .project-banana .project-media {
   height: auto;
-  aspect-ratio: 1600 / 766;
+  aspect-ratio: 1600 / 772;
   background: #111;
 }
 
@@ -850,6 +894,22 @@ button:focus-visible {
   object-position: center;
 }
 
+.project-draugu {
+  --project-accent: #b76737;
+}
+
+.project-draugu .project-media {
+  height: auto;
+  aspect-ratio: 1600 / 781;
+  background: #efe9df;
+}
+
+.project-draugu .project-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
 .real-project-link,
 .molly-project-link,
 .terrio-project-link {
@@ -859,9 +919,28 @@ button:focus-visible {
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  display: flex;
+  align-items: stretch;
   gap: 18px;
+  overflow-x: auto;
+  padding: 4px 0 14px;
+  scroll-padding-inline: 0;
+  scroll-snap-type: inline mandatory;
+  scrollbar-color: var(--line-strong) transparent;
+  scrollbar-width: thin;
+}
+
+.projects-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--line-strong);
 }
 
 .projects-swipe-hint {
@@ -872,13 +951,15 @@ button:focus-visible {
   --project-accent: var(--accent);
   position: relative;
   display: flex;
-  grid-column: span 4;
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 24px;
   background: rgba(14, 16, 21, 0.88);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -894,10 +975,6 @@ button:focus-visible {
   background: linear-gradient(to bottom, transparent, var(--project-accent), transparent);
   content: "";
   opacity: 0.75;
-}
-
-.project-card-featured {
-  grid-column: span 8;
 }
 
 .project-manager {
@@ -1032,7 +1109,7 @@ button:focus-visible {
 }
 
 .project-card-featured .project-content h3 {
-  font-size: 27px;
+  font-size: 21px;
 }
 
 .project-content > p {
@@ -1237,6 +1314,7 @@ button:focus-visible {
   place-items: center;
   padding: 30px;
   opacity: 0;
+  overscroll-behavior: contain;
   pointer-events: none;
   transition: opacity 0.2s ease;
 }
@@ -1257,6 +1335,7 @@ button:focus-visible {
   position: relative;
   width: min(1080px, 92vw);
   max-height: 88vh;
+  max-height: 88dvh;
 }
 
 .lightbox-content {
@@ -1266,6 +1345,7 @@ button:focus-visible {
   overflow: hidden;
   width: 100%;
   max-height: 88vh;
+  max-height: 88dvh;
   border: 1px solid var(--line-strong);
   border-radius: 22px;
   background: #0c0e12;
@@ -1294,17 +1374,41 @@ button:focus-visible {
   cursor: pointer;
 }
 
-.lightbox-img {
+.lightbox-stage {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: calc(88vh - 74px);
+  height: calc(88dvh - 74px);
   max-height: calc(88vh - 74px);
+  max-height: calc(88dvh - 74px);
   background: #08090c;
-  object-fit: contain;
-  transition: opacity 0.12s ease;
+  cursor: zoom-in;
+  touch-action: none;
+  user-select: none;
 }
 
-.lightbox-img.is-switching {
-  opacity: 0.2;
+.lightbox-stage.is-zoomed {
+  cursor: grab;
+}
+
+.lightbox-stage.is-zoomed:active {
+  cursor: grabbing;
+}
+
+.lightbox-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  transform-origin: center;
+  transition: opacity 0.12s ease, transform 0.18s ease-out;
+  user-select: none;
+  will-change: transform;
+}
+
+.lightbox-stage.is-gesturing .lightbox-img {
+  transition: none;
 }
 
 .lightbox-nav {
@@ -1362,29 +1466,7 @@ button:focus-visible {
   transition: width 0.2s ease;
 }
 
-@keyframes devBlink {
-  0%,
-  100% {
-    color: var(--accent);
-    opacity: 1;
-  }
-
-  50% {
-    color: #f2f2f2;
-    opacity: 0.72;
-  }
-}
-
 @media (max-width: 1080px) {
-
-  .project-card {
-    grid-column: span 6;
-  }
-
-  .project-card-featured {
-    grid-column: span 12;
-  }
-
   .project-card-featured .project-media {
     aspect-ratio: 16 / 8;
   }
@@ -1609,9 +1691,19 @@ button:focus-visible {
     margin-bottom: 72px;
   }
 
+  .real-projects-grid .project-card-featured.project-azukeria .project-media {
+    height: auto;
+    aspect-ratio: 1880 / 888;
+  }
+
+  .real-projects-grid .project-parka .project-media {
+    height: auto;
+    aspect-ratio: 1873 / 863;
+  }
+
   .real-projects-grid .project-card-featured.project-cares .project-media {
     height: auto;
-    aspect-ratio: 1600 / 764;
+    aspect-ratio: 1600 / 758;
   }
 
   .real-projects-grid .project-molly .project-media {
@@ -1626,12 +1718,17 @@ button:focus-visible {
 
   .real-projects-grid .project-banana .project-media {
     height: auto;
-    aspect-ratio: 1600 / 766;
+    aspect-ratio: 1600 / 772;
   }
 
   .real-projects-grid .project-provence .project-media {
     height: auto;
     aspect-ratio: 1600 / 771;
+  }
+
+  .real-projects-grid .project-draugu .project-media {
+    height: auto;
+    aspect-ratio: 1600 / 781;
   }
 
   .project-card-featured .project-media,
@@ -1763,5 +1860,17 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+@keyframes devBlink {
+  0%,
+  100% {
+    color: var(--accent);
+    opacity: 1;
+  }
+
+  50% {
+    color: #f2f2f2;
+    opacity: 0.72;
   }
 }

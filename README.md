@@ -1,6 +1,6 @@
 # João Lescovar — Portfólio
 
-Portfólio pessoal de João Lescovar, desenvolvido com HTML, CSS e JavaScript e publicado no Firebase Hosting.
+Portfólio pessoal de João Lescovar, desenvolvido com React e publicado no Firebase Hosting.
 
 ## Site
 
@@ -13,8 +13,9 @@ Portfólio pessoal de João Lescovar, desenvolvido com HTML, CSS e JavaScript e 
 - Galeria de projetos
 - Animações suaves com suporte a redução de movimento
 - Imagens otimizadas em WebP
+- Componentes e interações construídos em React
 
 
 ## Publicação
 
-O projeto utiliza Firebase Hosting. Os arquivos de cache local, variáveis de ambiente e imagens-fonte não publicadas são ignorados pelo Git.
+Use `npm run dev` para desenvolvimento e `npm run build` para gerar a versão de produção em `dist`. O projeto utiliza Firebase Hosting.

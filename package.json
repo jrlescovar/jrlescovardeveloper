@@ -1,0 +1,31 @@
+{
+  "name": "jrlescovardeveloper",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal de João Lescovar, desenvolvido com React e publicado no Firebase Hosting.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrlescovar/jrlescovardeveloper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrlescovar/jrlescovardeveloper/issues"
+  },
+  "homepage": "https://github.com/jrlescovar/jrlescovardeveloper#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
+  }
+}
