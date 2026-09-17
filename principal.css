@@ -536,7 +536,7 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   z-index: 2;
-  border: 6px solid #d60000;
+  border: 6px solid var(--accent);
   border-radius: 50%;
   content: "";
   pointer-events: none;
