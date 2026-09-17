@@ -111,6 +111,7 @@ button:focus-visible {
 
 .brand-code .brand-dev {
   color: var(--accent);
+  animation: devBlink 1.15s steps(1, end) infinite;
 }
 
 /* Cabeçalho */
@@ -525,7 +526,7 @@ button:focus-visible {
   margin: 0 auto 26px;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 2px rgba(255, 23, 76, 0.45), 0 0 28px rgba(255, 23, 76, 0.22);
 }
 
 .portrait-ring::before {
@@ -536,7 +537,7 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   z-index: 2;
-  border: 5px solid var(--accent);
+  border: 6px solid #ff174c;
   border-radius: 50%;
   content: "";
   pointer-events: none;
@@ -1864,5 +1865,16 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes devBlink {
+  0%,
+  100% {
+    color: var(--accent);
+  }
+
+  50% {
+    color: #fff;
   }
 }
