@@ -529,29 +529,14 @@ button:focus-visible {
 }
 
 .portrait-ring::before {
-  position: absolute;
-  inset: 6px;
-  z-index: 3;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg 294deg,
-    rgba(255, 229, 235, 0.12) 312deg,
-    rgba(255, 229, 235, 0.95) 334deg,
-    transparent 356deg
-  );
-  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
-  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
-  animation: portraitSweep 4s linear infinite;
-  content: "";
-  pointer-events: none;
+  content: none;
 }
 
 .portrait-ring::after {
   position: absolute;
   inset: 0;
   z-index: 2;
-  border: 6px solid #9b1f45;
+  border: 6px solid #d60000;
   border-radius: 50%;
   content: "";
   pointer-events: none;
@@ -1890,11 +1875,5 @@ button:focus-visible {
 
   50% {
     color: #fff;
-  }
-}
-
-@keyframes portraitSweep {
-  to {
-    transform: rotate(360deg);
   }
 }
