@@ -26,6 +26,12 @@ function Brand({ link = false }) {
   return link ? <a className="brand-code" href="#inicio" aria-label="Voltar ao início">{content}</a> : <span className="brand-code" aria-label="JrDev">{content}</span>;
 }
 
+function AccentArrows({ label }) {
+  return label.split(/([←→↗])/u).map((part, index) =>
+    /[←→↗]/u.test(part) ? <span className="accent-arrow" key={index}>{part}</span> : part
+  );
+}
+
 function InstagramIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.5-2.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z" /></svg>;
 }
@@ -70,8 +76,8 @@ function ProjectCard({ project, text, personalIndex, openGallery }) {
       <div className="project-footer">
         <div className="project-tags"><span>{status}</span><span>{personal ? project.tag : text[project.countryKey]}</span></div>
         {project.href
-          ? <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer">{linkLabel}</a>
-          : <span className="project-link disabled" aria-disabled="true">{linkLabel}</span>}
+          ? <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer"><AccentArrows label={linkLabel} /></a>
+          : <span className="project-link disabled" aria-disabled="true"><AccentArrows label={linkLabel} /></span>}
       </div>
     </div>
   </article>;
@@ -229,9 +235,9 @@ function Lightbox({ project, index, setIndex, close, text, language }) {
           <img className="lightbox-img" src={current} alt={alt} draggable="false" decoding="async" fetchPriority="high" style={{ transform: `translate3d(${transform.x}px, ${transform.y}px, 0) scale(${transform.scale})` }} />
         </div>
         <div className="lightbox-nav" aria-label="Navegação da galeria">
-          <button className="lb-btn" type="button" onClick={previous}>{text.previous}</button>
+          <button className="lb-btn" type="button" onClick={previous}><AccentArrows label={text.previous} /></button>
           <div className="lb-center"><span>{counter}</span><div className="lb-line" aria-hidden="true" style={{ "--progress": `${((index + 1) / total) * 100}%` }} /></div>
-          <button className="lb-btn" type="button" onClick={next}>{text.next}</button>
+          <button className="lb-btn" type="button" onClick={next}><AccentArrows label={text.next} /></button>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@
   --text: #f3eee8;
   --muted: #a59d96;
   --muted-strong: #d0c8c0;
-  --accent: #c77b78;
+  --accent: #ff365f;
   --accent-warm: #c89b78;
   --cyan: #6ed9ff;
   --green: #42dc93;
@@ -111,7 +111,6 @@ button:focus-visible {
 
 .brand-code .brand-dev {
   color: var(--accent);
-  animation: devBlink 1.15s steps(1, end) infinite;
 }
 
 /* Cabeçalho */
@@ -319,7 +318,7 @@ button:focus-visible {
 .sidebar-profile img {
   width: 64px;
   height: 64px;
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  border: 2px solid var(--accent);
   border-radius: 50%;
   object-fit: cover;
 }
@@ -568,7 +567,7 @@ button:focus-visible {
 
 .profile-card h2 + p {
   margin-top: 3px;
-  color: var(--muted);
+  color: var(--accent);
   font-size: 14px;
 }
 
@@ -955,7 +954,7 @@ button:focus-visible {
   min-width: 0;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 54, 95, 0.4);
   border-radius: 24px;
   background: rgba(14, 16, 21, 0.88);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
@@ -963,7 +962,7 @@ button:focus-visible {
 }
 
 .project-card:hover {
-  border-color: color-mix(in srgb, var(--project-accent) 42%, rgba(255, 255, 255, 0.14));
+  border-color: var(--accent);
   box-shadow: 0 28px 65px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
 }
@@ -972,7 +971,7 @@ button:focus-visible {
   position: absolute;
   inset: 0 auto 0 0;
   width: 2px;
-  background: linear-gradient(to bottom, transparent, var(--project-accent), transparent);
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
   content: "";
   opacity: 0.75;
 }
@@ -1081,6 +1080,11 @@ button:focus-visible {
   backdrop-filter: blur(10px);
 }
 
+.media-open b,
+.accent-arrow {
+  color: var(--accent);
+}
+
 .project-card:hover .media-open,
 .project-media:focus-visible .media-open {
   opacity: 1;
@@ -1095,7 +1099,7 @@ button:focus-visible {
 }
 
 .project-number {
-  color: var(--project-accent);
+  color: var(--accent);
   font-family: "Poppins", sans-serif;
   font-size: 9px;
   letter-spacing: 0.08em;
@@ -1140,7 +1144,7 @@ button:focus-visible {
 
 .project-tags span:not(:last-child)::after {
   margin: 0 8px;
-  color: color-mix(in srgb, var(--project-accent) 56%, transparent);
+  color: var(--accent);
   content: "•";
 }
 
@@ -1154,7 +1158,7 @@ button:focus-visible {
 }
 
 .project-link:hover {
-  color: var(--project-accent);
+  color: var(--accent);
 }
 
 .project-link.disabled {
@@ -1860,17 +1864,5 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-}
-@keyframes devBlink {
-  0%,
-  100% {
-    color: var(--accent);
-    opacity: 1;
-  }
-
-  50% {
-    color: #f2f2f2;
-    opacity: 0.72;
   }
 }
