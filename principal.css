@@ -837,14 +837,14 @@ button:focus-visible {
 
 .project-other-projects .project-media {
   height: auto;
-  aspect-ratio: 1585 / 1600;
+  aspect-ratio: 1600 / 758;
   background: #17110d;
 }
 
 .project-other-projects .project-media img {
   padding: 0;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
 }
 
 .project-cares {
@@ -1747,7 +1747,7 @@ button:focus-visible {
 
   .real-projects-grid .project-other-projects .project-media {
     height: auto;
-    aspect-ratio: 1585 / 1600;
+    aspect-ratio: 1600 / 758;
   }
 
   .real-projects-grid .project-card-featured.project-cares .project-media {
