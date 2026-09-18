@@ -812,6 +812,22 @@ button:focus-visible {
   object-position: center;
 }
 
+.project-hidden-brew {
+  --project-accent: #19443e;
+}
+
+.project-hidden-brew .project-media {
+  height: auto;
+  aspect-ratio: 1600 / 767;
+  background: #f7f9f4;
+}
+
+.project-hidden-brew .project-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
 .project-cares {
   --project-accent: #c7b18b;
 }
@@ -1703,6 +1719,11 @@ button:focus-visible {
   .real-projects-grid .project-parka .project-media {
     height: auto;
     aspect-ratio: 1873 / 863;
+  }
+
+  .real-projects-grid .project-hidden-brew .project-media {
+    height: auto;
+    aspect-ratio: 1600 / 767;
   }
 
   .real-projects-grid .project-card-featured.project-cares .project-media {
