@@ -533,13 +533,7 @@ button:focus-visible {
 }
 
 .portrait-ring::after {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  border: 6px solid var(--accent);
-  border-radius: 50%;
-  content: "";
-  pointer-events: none;
+  content: none;
 }
 
 .portrait-ring img {
@@ -569,6 +563,15 @@ button:focus-visible {
   margin-top: 3px;
   color: var(--accent);
   font-size: 14px;
+}
+
+.profile-card h2 + .profile-role {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--accent);
+  white-space: nowrap;
+  animation: profileRoleTyping 4s steps(13, end) infinite, profileRoleCaret 0.75s step-end infinite;
 }
 
 .project-tags span {
@@ -823,6 +826,22 @@ button:focus-visible {
 }
 
 .project-hidden-brew .project-media img {
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-other-projects {
+  --project-accent: #bc946f;
+}
+
+.project-other-projects .project-media {
+  height: auto;
+  aspect-ratio: 1585 / 1600;
+  background: #17110d;
+}
+
+.project-other-projects .project-media img {
   padding: 0;
   object-fit: cover;
   object-position: center;
@@ -1726,6 +1745,11 @@ button:focus-visible {
     aspect-ratio: 1600 / 767;
   }
 
+  .real-projects-grid .project-other-projects .project-media {
+    height: auto;
+    aspect-ratio: 1585 / 1600;
+  }
+
   .real-projects-grid .project-card-featured.project-cares .project-media {
     height: auto;
     aspect-ratio: 1600 / 758;
@@ -1886,6 +1910,12 @@ button:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .profile-card h2 + .profile-role {
+    width: auto;
+    border-right: 0;
+    animation: none;
+  }
 }
 
 @keyframes devBlink {
@@ -1896,5 +1926,27 @@ button:focus-visible {
 
   50% {
     color: #fff;
+  }
+}
+
+@keyframes profileRoleTyping {
+  0%,
+  12% {
+    width: 0;
+  }
+
+  48%,
+  82% {
+    width: 13ch;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes profileRoleCaret {
+  50% {
+    border-color: transparent;
   }
 }

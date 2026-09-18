@@ -59,6 +59,7 @@ function ProjectCard({ project, text, personalIndex, openGallery }) {
   const number = project.numberKey ? text[project.numberKey] : project.number || "2026";
   const description = personal ? text.projectDescriptions[personalIndex] : text[project.descriptionKey];
   const status = personal ? (project.statusKey ? text[project.statusKey] : project.status) : text[project.typeKey];
+  const detail = personal ? project.tag : (project.countryKey ? text[project.countryKey] : null);
   const linkLabel = personal ? text.projectLinks[personalIndex] : text[project.linkKey];
   const classes = ["project-card", `project-${project.slug}`];
   if (project.featured) classes.push("project-card-featured");
@@ -74,7 +75,7 @@ function ProjectCard({ project, text, personalIndex, openGallery }) {
       <h3>{project.title}</h3>
       <p>{description}</p>
       <div className="project-footer">
-        <div className="project-tags"><span>{status}</span><span>{personal ? project.tag : text[project.countryKey]}</span></div>
+        <div className="project-tags"><span>{status}</span>{detail && <span>{detail}</span>}</div>
         {project.href
           ? <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer"><AccentArrows label={linkLabel} /></a>
           : <span className="project-link disabled" aria-disabled="true"><AccentArrows label={linkLabel} /></span>}
@@ -380,7 +381,7 @@ function App() {
     <main className="page-shell">
       <section className="hero" id="inicio" aria-label="Apresentação de João Lescovar"><aside className="profile-card" aria-label="Perfil de João Lescovar">
         <div className="portrait-ring"><img src="/img/perfil.webp" alt="Foto de João Lescovar" width="830" height="900" decoding="async" fetchPriority="high" /></div>
-        <div className="profile-card-content"><h2>João Lescovar</h2><p>Web Developer</p><SocialIcons /></div>
+        <div className="profile-card-content"><h2>João Lescovar</h2><p className="profile-role">Web Developer</p><SocialIcons /></div>
       </aside></section>
 
       <section className="skills-card" id="habilidades" aria-labelledby="skillsTitle">
