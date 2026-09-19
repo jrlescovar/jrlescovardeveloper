@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { personalProjects, sidebarTargets, skills, worldProjects } from "./data.js";
+import { navigationTargets, personalProjects, sidebarTargets, skills, worldProjects } from "./data.js";
 import { translations } from "./translations.js";
 
 const github = "https://github.com/jrlescovar";
@@ -60,7 +60,7 @@ function ProjectCard({ project, text, personalIndex, openGallery }) {
   const description = personal ? text.projectDescriptions[personalIndex] : text[project.descriptionKey];
   const status = personal ? (project.statusKey ? text[project.statusKey] : project.status) : text[project.typeKey];
   const detail = personal ? project.tag : (project.countryKey ? text[project.countryKey] : null);
-  const linkLabel = personal ? text.projectLinks[personalIndex] : text[project.linkKey];
+  const linkLabel = project.href ? (personal ? text.projectLinks[personalIndex] : text[project.linkKey]) : text.galleryAction;
   const classes = ["project-card", `project-${project.slug}`];
   if (project.featured) classes.push("project-card-featured");
   if (!personal) classes.push("real-project-card");
@@ -78,7 +78,7 @@ function ProjectCard({ project, text, personalIndex, openGallery }) {
         <div className="project-tags"><span>{status}</span>{detail && <span>{detail}</span>}</div>
         {project.href
           ? <a className="project-link" href={project.href} target="_blank" rel="noopener noreferrer"><AccentArrows label={linkLabel} /></a>
-          : <span className="project-link disabled" aria-disabled="true"><AccentArrows label={linkLabel} /></span>}
+          : <button className="project-link project-gallery-link" type="button" onPointerEnter={() => preloadGalleryImages(project.images)} onFocus={() => preloadGalleryImages(project.images)} onClick={(event) => openGallery(project, event.currentTarget)} aria-label={`${text.galleryAction.replace(/↗/g, "").trim()} — ${project.title}`}><AccentArrows label={linkLabel} /></button>}
       </div>
     </div>
   </article>;
@@ -349,15 +349,17 @@ function App() {
   const closeGallery = () => { setGalleryProject(null); window.requestAnimationFrame(() => galleryTriggerRef.current?.focus({ preventScroll: true })); };
 
   return <>
+    <a className="skip-link" href="#conteudo">{text.skipContent}</a>
     <header className={`topbar${scrolled ? " scrolled" : ""}`} id="topbar">
       <div className="topbar-inner">
         <span onClick={(event) => navigate(event, "inicio")}><Brand link /></span>
         <nav className="topbar-nav" aria-label="Navegação principal">
-          {text.topLinks.map((label, index) => <a className="top-link" href={`#${["sobre", "habilidades", "projetos", "contato"][index]}`} key={label} onClick={(event) => navigate(event, ["sobre", "habilidades", "projetos", "contato"][index])}>{label}</a>)}
+          {text.topLinks.map((label, index) => <a className="top-link" href={`#${navigationTargets[index]}`} key={label} onClick={(event) => navigate(event, navigationTargets[index])}>{label}</a>)}
         </nav>
         <div className="topbar-actions">
-          <button className="lang-toggle" type="button" aria-label={text.toggleLabel} onClick={() => setLanguage(language === "pt" ? "en" : "pt")}>{language === "pt" ? "EN" : "PT"}</button>
-          <button className="lang-toggle" type="button" aria-label={language === "es" ? "Cambiar idioma a inglés" : "Cambiar idioma a español"} onClick={() => setLanguage(language === "es" ? "en" : "es")}>{language === "es" ? "EN" : "ES"}</button>
+          <div className="language-switch" role="group" aria-label={text.languageLabel}>
+            {(["pt", "en", "es"]).map((code) => <button className={`lang-toggle${language === code ? " is-active" : ""}`} type="button" key={code} lang={code === "pt" ? "pt-BR" : code} aria-label={text.languageNames[code]} aria-pressed={language === code} onClick={() => setLanguage(code)}>{code.toUpperCase()}</button>)}
+          </div>
           <button ref={menuButtonRef} className="menu-btn" type="button" aria-label={text.openMenu} aria-controls="sidebar" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><span className="hamburger" aria-hidden="true"><span /><span /><span /></span></button>
         </div>
       </div>
@@ -378,11 +380,21 @@ function App() {
       </div></div>
     </aside>
 
-    <main className="page-shell">
-      <section className="hero" id="inicio" aria-label="Apresentação de João Lescovar"><aside className="profile-card" aria-label="Perfil de João Lescovar">
+    <main className="page-shell" id="conteudo">
+      <section className="hero" id="inicio" aria-label="Apresentação de João Lescovar"><div className="profile-card">
         <div className="portrait-ring"><img src="/img/perfil.webp" alt="Foto de João Lescovar" width="830" height="900" decoding="async" fetchPriority="high" /></div>
-        <div className="profile-card-content"><h2>João Lescovar</h2><p className="profile-role">Web Developer</p><SocialIcons /></div>
-      </aside></section>
+        <div className="profile-card-content"><h1>João Lescovar</h1><p className="profile-role">Web Developer</p><p className="hero-description">{text.heroDescription}</p><div className="hero-actions"><a className="button-primary" href="mailto:jrlescovar@gmail.com">{text.contactAction} <span aria-hidden="true">↗</span></a><a className="button-secondary" href="#projetos" onClick={(event) => navigate(event, "projetos")}>{text.projectsAction} <span aria-hidden="true">↘</span></a></div><SocialIcons /></div>
+      </div></section>
+
+      <section className="projects-section" id="projetos" aria-labelledby="projectsTitle">
+        <div className="real-projects"><div className="section-heading real-projects-heading"><div><p className="section-kicker">{text.realProjectsKicker}</p><h2 id="projectsTitle">{text.realProjectsTitle}</h2></div><p>{text.realProjectsDescription}</p></div>
+          <p className="projects-swipe-hint real-projects-swipe-hint" aria-hidden="true">{text.swipe.replace(/<[^>]*>/g, " ")} <span>→</span></p>
+          <div className="projects-grid real-projects-grid">{worldProjects.map((project) => <ProjectCard key={project.slug} project={project} text={text} openGallery={openGallery} />)}</div>
+        </div>
+        <div className="section-heading projects-heading personal-projects-heading"><div><p className="section-kicker">{text.projectsKicker}</p><h2>{text.projectsTitle}</h2></div><p>{text.projectsDescription}</p></div>
+        <p className="projects-swipe-hint" aria-hidden="true">{text.swipe.replace(/<[^>]*>/g, " ")} <span>→</span></p>
+        <div className="projects-grid" id="projectsGrid">{personalProjects.map((project, index) => <ProjectCard key={project.slug} project={project} text={text} personalIndex={index} openGallery={openGallery} />)}</div>
+      </section>
 
       <section className="skills-card" id="habilidades" aria-labelledby="skillsTitle">
         <div className="section-heading skills-heading"><div><p className="section-kicker">{text.skillsKicker}</p><h2 id="skillsTitle">{text.skillsTitle}</h2></div><p>{text.skillsDescription}</p></div>
@@ -395,16 +407,6 @@ function App() {
           {text.aboutParagraphs.map((paragraph) => <p key={paragraph} dangerouslySetInnerHTML={{ __html: paragraph }} />)}
           <div className="resume-card" aria-label="Currículo em preparação"><div><span>{text.resumeTitle}</span><strong>{text.resumeDescription}</strong></div><span className="resume-status">{text.soon}</span></div>
         </div></div>
-      </section>
-
-      <section className="projects-section" id="projetos" aria-labelledby="projectsTitle">
-        <div className="real-projects"><div className="section-heading real-projects-heading"><div><p className="section-kicker">{text.realProjectsKicker}</p><h2>{text.realProjectsTitle}</h2></div><p>{text.realProjectsDescription}</p></div>
-          <p className="projects-swipe-hint real-projects-swipe-hint" aria-hidden="true">{text.swipe.replace(/<[^>]*>/g, " ")} <span>→</span></p>
-          <div className="projects-grid real-projects-grid">{worldProjects.map((project) => <ProjectCard key={project.slug} project={project} text={text} openGallery={openGallery} />)}</div>
-        </div>
-        <div className="section-heading projects-heading personal-projects-heading"><div><p className="section-kicker">{text.projectsKicker}</p><h2 id="projectsTitle">{text.projectsTitle}</h2></div><p>{text.projectsDescription}</p></div>
-        <p className="projects-swipe-hint" aria-hidden="true">{text.swipe.replace(/<[^>]*>/g, " ")} <span>→</span></p>
-        <div className="projects-grid" id="projectsGrid">{personalProjects.map((project, index) => <ProjectCard key={project.slug} project={project} text={text} personalIndex={index} openGallery={openGallery} />)}</div>
       </section>
 
       <section className="connect-section" id="contato" aria-labelledby="contactTitle">

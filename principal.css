@@ -1950,3 +1950,423 @@ button:focus-visible {
     border-color: transparent;
   }
 }
+
+/* Apresentação editorial e ações principais */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 500;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.topbar-inner > span {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.topbar-inner > span .brand-code {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+}
+
+.language-switch .lang-toggle {
+  min-width: 34px;
+  height: 36px;
+  padding: 0 6px;
+  border: 0;
+  background: transparent;
+  font-size: 11px;
+}
+
+.language-switch .lang-toggle.is-active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.hero {
+  min-height: min(740px, calc(100dvh - 100px));
+  padding: 56px 16px 82px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero .profile-card {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(50px, 7vw, 110px);
+  width: 100%;
+  max-width: 1060px;
+  padding: 0;
+}
+
+.hero .portrait-ring {
+  width: min(100%, 355px);
+  height: auto;
+  margin: 0 auto;
+  aspect-ratio: 1;
+}
+
+.hero .profile-card-content {
+  max-width: 610px;
+  text-align: left;
+}
+
+.hero .profile-card h1 {
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1.06;
+}
+
+.hero .profile-card h1 + .profile-role {
+  display: inline-block;
+  width: 0;
+  margin-top: 12px;
+  overflow: hidden;
+  border-right: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: profileRoleTyping 4s steps(13, end) infinite, profileRoleCaret 0.75s step-end infinite;
+}
+
+.hero-description {
+  max-width: 50ch;
+  margin-top: 28px;
+  color: var(--muted-strong);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #170c0f;
+}
+
+.button-primary:hover {
+  background: #ff6482;
+  transform: translateY(-2px);
+}
+
+.button-secondary {
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  border-color: var(--accent);
+  background: rgba(255, 54, 95, 0.08);
+}
+
+.button-primary span,
+.button-secondary span {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.hero .social-links {
+  justify-content: flex-start;
+  margin-top: 26px;
+}
+
+.social-links > a {
+  width: 44px;
+  height: 44px;
+}
+
+/* Os projetos lideram a narrativa sem alterar a largura dos cartões. */
+.projects-section {
+  padding-top: 92px;
+  padding-bottom: 88px;
+}
+
+.real-projects {
+  padding-bottom: 86px;
+  margin-bottom: 86px;
+}
+
+.project-card {
+  border-color: rgba(255, 255, 255, 0.13);
+  background: #161414;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  border-color: var(--accent);
+}
+
+.project-card::after {
+  opacity: 0.3;
+}
+
+.project-content > p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.project-number,
+.project-tags span {
+  font-size: 11px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  font-size: 12px;
+}
+
+.project-gallery-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.media-open {
+  font-size: 11px;
+}
+
+.skills-card {
+  margin-top: 0;
+}
+
+.skill-item > span:last-child {
+  font-size: 11px;
+}
+
+.section-heading > p,
+.connect-copy > p:last-child {
+  font-size: 15px;
+}
+
+.section-kicker {
+  font-size: 11px;
+}
+
+.about-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.about-copy p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.resume-card > div > span,
+.resume-status {
+  font-size: 11px;
+}
+
+.resume-card strong {
+  font-size: 13px;
+}
+
+.connect-links small {
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero .profile-card {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 680px) {
+  .language-switch {
+    gap: 1px;
+    padding: 2px;
+  }
+
+  .language-switch .lang-toggle {
+    min-width: 32px;
+    height: 36px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 32px 12px 56px;
+  }
+
+  .hero .profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hero .portrait-ring {
+    width: 178px;
+    margin-bottom: 0;
+  }
+
+  .hero .profile-card-content {
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .hero .profile-card h1 {
+    font-size: 38px;
+  }
+
+  .hero-description {
+    margin: 22px auto 0;
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .hero .social-links {
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .projects-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .real-projects {
+    padding-bottom: 68px;
+    margin-bottom: 68px;
+  }
+
+  .project-content > p {
+    -webkit-line-clamp: 3;
+  }
+
+  .project-content,
+  .project-card-featured .project-content {
+    padding: 16px;
+  }
+
+  .project-footer {
+    padding-top: 10px;
+  }
+
+  .project-tags span {
+    font-size: 10px;
+  }
+
+  .projects-swipe-hint {
+    font-size: 11px;
+  }
+
+  .media-open {
+    font-size: 11px;
+  }
+
+  .skills-card {
+    padding: 30px 14px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px 10px;
+  }
+
+  .skill-item {
+    min-height: 72px;
+  }
+
+  .skill-item > span:last-child {
+    max-width: none;
+    overflow: visible;
+    font-size: 11px;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .section-heading > p {
+    font-size: 14px;
+  }
+
+  .about-copy p {
+    font-size: 15px;
+  }
+
+  .connect-section {
+    padding: 38px 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .topbar-inner {
+    padding-left: 10px;
+  }
+
+  .topbar-actions {
+    gap: 5px;
+  }
+
+  .hero-actions a {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .profile-card h1 + .profile-role {
+    width: auto;
+    border-right: 0;
+    animation: none;
+  }
+}

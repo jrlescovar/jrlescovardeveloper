@@ -4,11 +4,9 @@ export const skills = [
   ["devicon-javascript-plain colored", "JavaScript"],
   ["sql", "SQL"],
   ["devicon-firebase-plain colored", "Firebase"],
-  ["devicon-python-plain colored", "Python"],
   ["devicon-react-original colored", "React"],
   ["devicon-nodejs-plain colored", "Node.js"],
   ["devicon-typescript-plain colored", "TypeScript"],
-  ["devicon-figma-plain colored", "Figma"],
 ];
 
 export const worldProjects = [
@@ -135,5 +133,5 @@ export const personalProjects = [
   },
 ];
 
-export const navigationTargets = ["sobre", "habilidades", "projetos", "contato"];
-export const sidebarTargets = ["inicio", "sobre", "habilidades", "projetos", "contato"];
+export const navigationTargets = ["projetos", "sobre", "habilidades", "contato"];
+export const sidebarTargets = ["inicio", "projetos", "sobre", "habilidades", "contato"];
