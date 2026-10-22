@@ -1931,17 +1931,18 @@ button:focus-visible {
 
 @keyframes profileRoleTyping {
   0%,
-  12% {
-    width: 0;
+  6% {
+    clip-path: inset(0 100% 0 0);
   }
 
-  48%,
-  82% {
-    width: 13ch;
+  24%,
+  41% {
+    clip-path: inset(0 0 0 0);
   }
 
+  50%,
   100% {
-    width: 0;
+    clip-path: inset(0 100% 0 0);
   }
 }
 
@@ -2042,16 +2043,30 @@ button:focus-visible {
 }
 
 .hero .profile-card h1 + .profile-role {
-  display: inline-block;
-  width: 0;
+  display: inline-grid;
+  width: auto;
   margin-top: 12px;
-  overflow: hidden;
-  border-right: 1px solid var(--accent);
   color: var(--accent);
   font-size: 15px;
   font-weight: 600;
   white-space: nowrap;
-  animation: profileRoleTyping 4s steps(13, end) infinite, profileRoleCaret 0.75s step-end infinite;
+}
+
+.profile-role-word {
+  grid-area: 1 / 1;
+  justify-self: start;
+  padding-right: 2px;
+  border-right: 1px solid var(--accent);
+  clip-path: inset(0 100% 0 0);
+  animation: profileRoleTyping 8s steps(13, end) infinite, profileRoleCaret 0.75s step-end infinite;
+}
+
+.profile-role-word:nth-child(2) {
+  animation-delay: 4s, 0s;
+}
+
+.profile-role-static {
+  display: none;
 }
 
 .hero-description {
@@ -2397,5 +2412,14 @@ button:focus-visible {
     width: auto;
     border-right: 0;
     animation: none;
+    white-space: normal;
+  }
+
+  .profile-role-word {
+    display: none;
+  }
+
+  .profile-role-static {
+    display: inline;
   }
 }

@@ -7,6 +7,14 @@ const linkedin = "https://www.linkedin.com/in/jo%C3%A3o-lescovar-18b951277/";
 const instagram = "https://instagram.com/jrlescovar";
 const galleryImageCache = new Map();
 
+function ProfileRole() {
+  return <p className="profile-role" aria-label="Web Developer / IT Technician">
+    <span className="profile-role-word" aria-hidden="true">Web Developer</span>
+    <span className="profile-role-word" aria-hidden="true">IT Technician</span>
+    <span className="profile-role-static" aria-hidden="true">Web Developer / IT Technician</span>
+  </p>;
+}
+
 function preloadGalleryImages(images = []) {
   if (typeof Image === "undefined") return;
   images.forEach((src) => {
@@ -383,7 +391,7 @@ function App() {
     <main className="page-shell" id="conteudo">
       <section className="hero" id="inicio" aria-label="Apresentação de João Lescovar"><div className="profile-card">
         <div className="portrait-ring"><img src="/img/perfil.webp" alt="Foto de João Lescovar" width="830" height="900" decoding="async" fetchPriority="high" /></div>
-        <div className="profile-card-content"><h1>João Lescovar</h1><p className="profile-role">Web Developer</p><p className="hero-description">{text.heroDescription}</p><div className="hero-actions"><a className="button-primary" href="mailto:jrlescovar@gmail.com">{text.contactAction} <span aria-hidden="true">↗</span></a><a className="button-secondary" href="#projetos" onClick={(event) => navigate(event, "projetos")}>{text.projectsAction} <span aria-hidden="true">↘</span></a></div><SocialIcons /></div>
+        <div className="profile-card-content"><h1>João Lescovar</h1><ProfileRole /><p className="hero-description">{text.heroDescription}</p><div className="hero-actions"><a className="button-primary" href="mailto:jrlescovar@gmail.com">{text.contactAction} <span aria-hidden="true">↗</span></a><a className="button-secondary" href="#projetos" onClick={(event) => navigate(event, "projetos")}>{text.projectsAction} <span aria-hidden="true">↘</span></a></div><SocialIcons /></div>
       </div></section>
 
       <section className="projects-section" id="projetos" aria-labelledby="projectsTitle">
