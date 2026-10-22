@@ -56,7 +56,6 @@ build/Release
 # Dependency directories
 node_modules/
 dist/
-.taste-skill/
 
 # Optional npm cache directory
 .npm
