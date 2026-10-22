@@ -75,7 +75,7 @@ export const translations = {
       featured: "2026 — DESTAQUE",
       versionOne: "Versão 1.0",
       projectDescriptions: [
-        "Plataforma de palpites esportivos com ligas, confrontos, ranking global e perfis de jogadores.",
+        "Plataforma de palpites esportivos com ligas, torneios competitivos, confrontos, ranking global e perfis de jogadores.",
         "Experiência 100% inspirada na Kings League e em sua dinâmica. Escolha entre 70 clubes e crie sua história no universo Kings.",
         "Estatísticas, campeonatos, perfis e personalização para uma comunidade de jogadores de EA27, remodelado e otimizado em uma nova versão do antigo EA26 Club APP.",
         "Disputa de pênaltis com cartas, estatísticas e mecânicas estratégicas, construída inteiramente em C.",
@@ -173,7 +173,7 @@ export const translations = {
       featured: "2026 — FEATURED",
       versionOne: "Version 1.0",
       projectDescriptions: [
-        "A sports prediction platform with leagues, matchups, global rankings and player profiles.",
+        "A sports prediction platform with leagues, competitive tournaments, matchups, global rankings and player profiles.",
         "A 100% Kings League-inspired experience built around its unique dynamics. Choose from 70 clubs and create your own story in the Kings universe.",
         "Statistics, tournaments, profiles and customization for an EA27 player community, redesigned and optimized as a new version of the former EA26 Club APP.",
         "A penalty shootout game with cards, statistics and strategic mechanics, built entirely in C.",
@@ -271,7 +271,7 @@ export const translations = {
       featured: "2026 — DESTACADO",
       versionOne: "Versión 1.0",
       projectDescriptions: [
-        "Plataforma de pronósticos deportivos con ligas, enfrentamientos, clasificación global y perfiles de jugadores.",
+        "Plataforma de pronósticos deportivos con ligas, torneos competitivos, enfrentamientos, clasificación global y perfiles de jugadores.",
         "Una experiencia 100% inspirada en la Kings League y su dinámica. Elige entre 70 clubes y crea tu propia historia en el universo Kings.",
         "Estadísticas, campeonatos, perfiles y personalización para una comunidad de jugadores de EA27, rediseñado y optimizado como una nueva versión del antiguo EA26 Club APP.",
         "Una tanda de penaltis con cartas, estadísticas y mecánicas estratégicas, desarrollada completamente en C.",
