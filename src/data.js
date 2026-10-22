@@ -11,33 +11,6 @@ export const skills = [
 
 export const worldProjects = [
   {
-    slug: "azukeria",
-    title: "AZUKERIA",
-    cover: "/projeto/azukeria-1.webp",
-    images: ["/projeto/azukeria-1.webp", "/projeto/azukeria-3.webp", "/projeto/azukeria-2.webp"],
-    width: 1600,
-    height: 756,
-    alt: "Página inicial da AZUKERIA",
-    descriptionKey: "azukeriaProjectDescription",
-    typeKey: "azukeriaProjectType",
-    countryKey: "azukeriaProjectCountry",
-    linkKey: "azukeriaProjectLink",
-    featured: true,
-  },
-  {
-    slug: "parka",
-    title: "PARKA Bakehouse",
-    cover: "/projeto/parka-2.webp",
-    images: ["/projeto/parka-2.webp", "/projeto/parka-1.webp", "/projeto/parka-3.webp"],
-    width: 1600,
-    height: 737,
-    alt: "Página inicial da PARKA Bakehouse",
-    descriptionKey: "parkaProjectDescription",
-    typeKey: "parkaProjectType",
-    countryKey: "parkaProjectCountry",
-    linkKey: "parkaProjectLink",
-  },
-  {
     slug: "hidden-brew",
     title: "The Hidden Brew",
     cover: "/projeto/hidden-brew-1.webp",
@@ -67,10 +40,10 @@ export const worldProjects = [
   {
     slug: "other-projects",
     title: "Outros Projetos",
-    cover: "/projeto/terrio-cafe-2.webp",
-    images: ["/projeto/terrio-cafe-2.webp", "/projeto/banana-coffee-2.webp", "/projeto/draugu-desertine-2.webp", "/projeto/provence-cafes-2-v2.webp"],
-    width: 1585,
-    height: 1600,
+    cover: "/projeto/parka-1.webp",
+    images: ["/projeto/parka-1.webp", "/projeto/azukeria-3.webp", "/projeto/terrio-cafe-2.webp", "/projeto/banana-coffee-2.webp", "/projeto/draugu-desertine-2.webp", "/projeto/provence-cafes-2-v2.webp"],
+    width: 1600,
+    height: 1217,
     alt: "Visual mobile de outros projetos",
     number: "2026",
     descriptionKey: "otherProjectsDescription",
@@ -80,6 +53,19 @@ export const worldProjects = [
 ];
 
 export const personalProjects = [
+  {
+    slug: "palpites-do-dia",
+    title: "Palpites do Dia",
+    cover: "/projeto/palpites-do-dia-1.webp",
+    images: ["/projeto/palpites-do-dia-1.webp"],
+    width: 3396,
+    height: 1710,
+    alt: "Telas do Palpites do Dia com palpites, liga, ranking e perfil",
+    number: "2026",
+    statusKey: "versionOne",
+    tag: "Web",
+    href: "https://joguepalpitesdodia.web.app/",
+  },
   {
     slug: "manager",
     title: "Kings League Manager",
