@@ -2146,6 +2146,35 @@ button:focus-visible {
   opacity: 0.3;
 }
 
+.project-palpites-do-dia {
+  --accent: #75b2ff;
+  --project-accent: var(--accent);
+  border-color: #3b82f6;
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.1);
+}
+
+.project-palpites-do-dia:hover,
+.project-palpites-do-dia:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.24), 0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+.project-palpites-do-dia .project-media {
+  height: auto;
+  aspect-ratio: 3396 / 1710;
+}
+
+.project-palpites-do-dia .project-media img {
+  display: block;
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-palpites-do-dia .project-tags span {
+  color: var(--accent);
+}
+
 .project-content > p {
   display: -webkit-box;
   overflow: hidden;
