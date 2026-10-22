@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { navigationTargets, personalProjects, sidebarTargets, skills, worldProjects } from "./data.js";
 import { translations } from "./translations.js";
+import FolderProjectCard from "./FolderProjectCard.jsx";
 
 const github = "https://github.com/jrlescovar";
 const linkedin = "https://www.linkedin.com/in/jo%C3%A3o-lescovar-18b951277/";
@@ -64,6 +65,7 @@ function SqlIcon() {
 
 function ProjectCard({ project, text, personalIndex, openGallery }) {
   const personal = Number.isInteger(personalIndex);
+  if (personal) return <FolderProjectCard project={project} text={text} index={personalIndex} openGallery={openGallery} />;
   const number = project.numberKey ? text[project.numberKey] : project.number || "2026";
   const description = personal ? text.projectDescriptions[personalIndex] : text[project.descriptionKey];
   const status = personal ? (project.statusKey ? text[project.statusKey] : project.status) : text[project.typeKey];
